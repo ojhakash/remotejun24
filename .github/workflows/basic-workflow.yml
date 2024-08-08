@@ -5,9 +5,10 @@ on: [push]
 
 env:
   owner_name: "Akash"
+  my_var: ${{ vars.MY_VAR }}
 
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job basic_workflow is executing as part of new workflow - $owner_name"
+      - run: echo "Job basic_workflow is executing as part of new workflow - $my_var"
